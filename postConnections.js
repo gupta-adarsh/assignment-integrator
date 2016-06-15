@@ -4,7 +4,7 @@ var options = {
 	url : "https://api.integrator.io/v1/connections/",
 	headers : {
 		"Content-Type" : "application/json",
-		"Authorization" : "bearer 7def6622d3f44e64a3a1f54af685bf75"
+		"Authorization" : "bearer " + process.env.authToken.toString()
 	},
 	method : "POST",
 	json : true,
