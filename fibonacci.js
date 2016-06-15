@@ -26,3 +26,4 @@ function NthFibonacci(n)
 
 var number=5;
 console.log("Fibonacci number "+number+ " is " + NthFibonacci(number))
+
