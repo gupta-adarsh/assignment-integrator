@@ -8,7 +8,7 @@ var options = {
 	},
 	method : "POST",
 	json : true,
-	
+
 	body : {
 		"type": "netsuite",
 		"name": "Netsuite Connection new",
@@ -23,10 +23,10 @@ var options = {
 }
 
 function callback(error,response,body){
-	if (!error && response.statusCode >= 200) {
+	if (!error && response.statusCode >= 200 && response.statusCode < 300) {
 //		var info = JSON.parse(body);
 		var info = body
-		
+
 		console.log(info);
 		console.log(info._id)
 		console.log(info.name)
@@ -38,4 +38,3 @@ function callback(error,response,body){
 }
 
 request(options,callback)
-

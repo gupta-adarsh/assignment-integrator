@@ -2,7 +2,7 @@ var request = require('request')
 var flowModule = require('./flowModule')
 
 function callback(error,response,body){
-    if (!error && response.statusCode >= 200) {
+    if (!error && response.statusCode >= 200 && response.statusCode < 300) {
         console.log("printing " + flowModule.calltype)
         console.log(body)
         flowModule.arr[flowModule.calltype] = body._id
